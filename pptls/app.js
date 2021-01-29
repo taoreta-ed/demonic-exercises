@@ -19,105 +19,79 @@ function getRandom(){
 }
 
 function machineChoice(){
+    /*Dado un numero aleatorio del 0 al 4 (Se redondea hacia abajo), da la opcion de tenn*/
     let random = getRandom();
 
     switch(random){
         case 0: 
+            /* El random es 0, la opcion de Tenn entonces es Piedra */
             mach = op1;
-            console.log('Soy la opcion ' + mach);
             return mach;
             break;
         case 1: 
             mach = op2;
-            console.log('Soy la opcion ' + mach);
             return mach;
             break;
         case 2: 
             mach = op3;
-            console.log('Soy la opcion ' + mach);
             return mach;
             break;
         case 3: 
             mach = op4;
-            console.log('Soy la opcion ' + mach);
             return mach;
             break;
         case 4: 
             mach = op5;
-            console.log('Soy la opcion ' + mach);
             return mach;
             break;
     }
 }
 
 function game(player, mach){
-    console.log(player + " , " + mach);
 
     if(player == mach){
-        console.log('Es un empate');
         return 'empate';
     }else if (player == "Piedra" && mach == "Tijeras"){
-        console.log('¡Piedra rompe tijeras! Gana el jugador');
         return 'Jugador';
     }else if (player == "Piedra" && mach == "Papel"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else if (player == "Piedra" && mach == "Lagarto"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Piedra" && mach == "Spock"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else if (player == "Papel" && mach == "Piedra"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Papel" && mach == "Tijeras"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else if (player == "Papel" && mach == "Lagarto"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else if (player == "Papel" && mach == "Spock"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Tijeras" && mach == "Piedra"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else if (player == "Tijeras" && mach == "Papel"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Tijeras" && mach == "Lagarto"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Tijeras" && mach == "Spock"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Lagarto" && mach == "Piedra"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else if (player == "Lagarto" && mach == "Papel"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Lagarto" && mach == "Tijeras"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else if (player == "Lagarto" && mach == "Spock"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Spock" && mach == "Piedra"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Spock" && mach == "Papel"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else if (player == "Spock" && mach == "Tijeras"){
-        console.log('Gana el jugador');
         return 'Jugador';
     }else if (player == "Spock" && mach == "Lagarto"){
-        console.log('Gana Tenn');
         return 'Tenn';
     }else{
-        console.log('Ocurrió algo inesperado');
         return 'Error';
     }
 }
