@@ -97,8 +97,12 @@ function game(player, mach){
 }
 
 btn1.addEventListener('click', ()=>{
+    let winPar = document.getElementById('result');
     let winner = game('Piedra', machineChoice());
     console.log(winner);
+
+    /*Crear un if para poner un mejor mensaje (Jugador1, Jugador2, Tenn1...)*/
+    winPar.innerHTML = "¡Ha ganado " + winner + " !";
 
     event.preventDefault();
 });
